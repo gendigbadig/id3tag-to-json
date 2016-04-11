@@ -1,0 +1,17 @@
+{
+  "type": "string",
+  "name": "string",
+  "audio": "string",
+  "coverArt": "string",
+  "genre": "string",
+  "album": "string",
+  "lyric": "string",
+  "info": "string",
+  "private": true,
+  "playCount": 0,
+  "favoriteCount": 0,
+  "id": "string",
+  "createdAt": "2016-01-16",
+  "updatedAt": "2016-01-16",
+  "accountId": "string"
+}
