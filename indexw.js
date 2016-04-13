@@ -19,7 +19,7 @@ var songlist = [];
 var filename = file[process.argv[2]];
 
 var filebasename = filename.replace(".mp3", "");
-var parser = mm(fs.createReadStream(staticdir + musicdir + filename), function(err, metadata){
+var parser = mm(fs.createReadStream(staticdir + musicdir + filename), {duration : true}, function(err, metadata){
 	if (err) throw err;
 
 	// Extract artwork 
@@ -35,7 +35,8 @@ var parser = mm(fs.createReadStream(staticdir + musicdir + filename), function(e
 	var mmdataMusic = {
 		"name": metadata['title'],
 		"genre": metadata['genre'][0],
-		"source" : "svara"
+		"source" : "svara",
+		"duration" : metadata['duration']
 	};
 	var mmdataArtist = {
 		"name": metadata['artist'][0],
